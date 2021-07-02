@@ -12,7 +12,7 @@
             "name": "Debug ODrive v3.x - ST-Link",
             "executable": "${workspaceRoot}/build/ODriveFirmware.elf",
             "configFiles": [
-                "interface/stlink-v2.cfg",
+                "interface/stlink-v2-1.cfg",
                 "target/stm32f4x_stlink.cfg",
             ],
             "svdFile": "${workspaceRoot}/Board/v3/STM32F40x.svd",
