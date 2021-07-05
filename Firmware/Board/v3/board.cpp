@@ -276,17 +276,19 @@ void system_init() {
     // Configure the system clock
     SystemClock_Config();
 
+
+    /* BYPASSED */
     // If the OTP is pristine, use the fake-otp in RAM instead
-    const uint8_t* otp_ptr = (const uint8_t*)FLASH_OTP_BASE;
-    if (*otp_ptr == 0xff) {
-        otp_ptr = fake_otp;
-    }
+    // const uint8_t* otp_ptr = (const uint8_t*)FLASH_OTP_BASE;
+    // if (*otp_ptr == 0xff) {
+    //     otp_ptr = fake_otp;
+    // }
 
     // Ensure that the board version for which this firmware is compiled matches
     // the board we're running on.
-    if (!check_board_version(otp_ptr)) {
-        for (;;);
-    }
+    // if (!check_board_version(otp_ptr)) {
+    //     for (;;);
+    // }
 }
 
 bool board_init() {
